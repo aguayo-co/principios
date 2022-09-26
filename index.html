@@ -1,11 +1,480 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Principios Aguayo</title>
 </head>
+<!-- Recuerden darle al botón Run para ver los cambios que se hagan en el archivo -->
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Work Sans", Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #F6F6F6;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  .spaceli {
+    margin-bottom: 16px;
+  }
+
+  .lista-principios {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    row-gap: 32px;
+    column-gap: 32px;
+  }
+
+  .lista-principios li {
+    flex: 1 1 40%;
+  }
+
+  /* Grupo uno */
+  .grupouno div {
+    color: #D0021B;
+    font-size: 16px;
+    font-weight: 700;
+    padding-right: 200px;
+    padding-left: 200px;
+    padding-bottom: 80px;
+  }
+
+  .grupouno h1 {
+    color: #D0021B;
+    font-size: 90px;
+    font-weight: 700;
+    padding-top: 200px;
+    padding-right: 200px;
+    padding-bottom: 80px;
+    padding-left: 200px;
+  }
+
+  .grupouno ol {
+    padding-bottom: 80px;
+  }
+
+  .grupouno .button {
+    padding-top: 19px;
+    padding-right: 52px;
+    padding-bottom: 19px;
+    padding-left: 30px;
+    border: 2px solid #D0021B;
+    border-radius: 51px;
+    color: #D0021B;
+  }
+
+  .grupouno .contenedor_de_principios_flex {
+    display: flex;
+    align-items: flex-start;
+    background-color: #FFFFFF;
+    justify-content: center;
+    align-content: flex-start;
+  }
+
+  .grupouno .hijos_flex {
+    /* display: flex; */
+    width: auto;
+    padding: 35px;
+  }
+
+  .grupouno li>hijos_flex {
+    list-style-type: none;
+  }
+
+  .grupouno .primera_mitad {
+    display: flex;
+    /* width: 25%; */
+    padding: 0;
+  }
+
+  .grupouno .circulo_rojo {
+    background-color: #D0021B;
+    border-radius: 100%;
+    color: white;
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    margin-top: 48px;
+  }
+
+  .grupouno h3 {
+    color: #3f3f3f;
+    text-transform: uppercase;
+    font-size: 22px;
+  }
+
+  .grupouno h4 {
+    color: #3f3f3f;
+    font-size: 18px;
+  }
+
+  .grupouno p {
+    color: #3f3f3f;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+
+  .grupouno .color_negro {
+    color: #3f3f3f;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+
+  .grupouno a {
+    color: #46A9C9;
+  }
+
+  .encabezado::before {
+    content: "";
+    display: block;
+    width: 85px;
+    height: 6px;
+    margin-bottom: 38px;
+    background-color: #bc0e21;
+    color: #3f3f3f;
+    font-size: 6opx;
+    font-weight: 700;
+  }
+
+  .encabezado {
+    color: #3f3f3f;
+    font-size: 60px;
+    font-weight: 700;
+  }
+
+  /* Grupo uno */
+
+  /* Grupo tres */
+
+  .wrapper {
+    margin-top: 66px;
+    margin-bottom: 66px;
+  }
+
+  .card {
+    padding: 0;
+    color: #3F3F3F;
+    background-color: #fff;
+
+  }
+
+  .circle {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: block;
+    background-color: #D0021B;
+    color: #FFF;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 50px;
+  }
+
+  .title {
+    text-transform: uppercase;
+    margin-top: 17px;
+    color: #575757;
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .flexbox {
+    display: inline-flex;
+    gap: 22px;
+  }
+
+  .link {
+    color: #46A9C9;
+  }
+
+  .link:hover {
+    color: #D0021B;
+  }
+
+  .list {
+    margin-top: 24px;
+    list-style-position: inside;
+    padding-left: 0;
+  }
+
+  .list li {
+    margin-bottom: 16px;
+  }
+
+  .card-text {
+    max-width: 392px;
+  }
+
+  .card-text p {
+    line-height: 24px;
+  }
+
+  .hero {
+    background-color: #D0021B;
+    color: #fff;
+    font-size: 90px;
+    font-weight: 700;
+    text-align: center;
+    padding: 90px 120px 110px 120px;
+  }
+
+  /* Grupo tres */
+</style>
+
 <body>
-<h2>Aguayo!</h2>
+  <!-- Misión 3 | Header -->
+  <header style="background-color: #D0021B; width: 100%; padding: 24px 200px 24px 200px">
+    <figure>
+      <img src="https://i.ibb.co/j65nCcg/Fill-1.png" style="">
+    </figure>
+  </header>
+
+  <!-- Misión 3 | Hero principal -->
+  <div class="hero">
+    <p>“Nos queremos convertir en la mejor consultora de Experiencia de Usuario
+      y Tecnología del mundo. El camino consiste en desarrollar Equipos de Alto Desempeño.” </p>
+  </div>
+
+  <!-- Misión 1 | Bloque Banner -->
+  <div style="background-color:#ffedef; padding:200px;">
+
+    <h2 style="font-weight:300; color:#d0021b; margin-top:0;"> <strong>Liderazgo</strong> | Aguayo</h2>
+    <p style="font-size:70px; font-weight:300; color:#3f3f3f; line-height:80px; margin-top:30px; margin-bottom:0;">Los
+      principios han sido establecidos para definir los criterios sobre los que se consolidan <u>los equipos de alto
+        desempeño. </u></p>
+
+  </div>
+
+
+  <section style="padding: 200px; background-color: white;">
+
+    <h2 class="encabezado" style="margin-bottom: 80px;">
+      Nuestros principios
+    </h2>
+
+    <ul class="lista-principios">
+      <li class="grupouno">
+        <div class="hijos_flex contenedor_de_principios_flex primera_mitad">
+
+          <div class="circulo_rojo">E</div>
+          <div class="hijos_flex">
+            <h3 class="spaceli"> Excelencia </h3>
+            <h4 class="spaceli"> ¿Cuándo hace bien el trabajo un líder? </h4>
+            <p> La reputación de su equipo de trabajo es el orgullo de un líder de Aguayo. Al líder le incomoda
+              profundamente la mediocridad, y no acepta discusión cuando hay que correr la milla extra. La excelencia es
+              la
+              marca del líder de Aguayo. </p>
+          </div>
+
+        </div>
+      </li>
+
+      <li style="list-style-type: none;">
+        <div style="display: flex; max-width: 630px">
+          <span
+            style="font-size: 32px; color: #ffffff; background: #d0021b; border-radius: 50%; min-width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-right: 24px; margin-top: 10px;">
+            P
+          </span>
+          <div>
+
+
+            <h3 class="spaceli" style="text-transform: uppercase; color: #3f3f3f; font-weight: 700; font-size: 22px;">
+
+              Perseverancia
+            </h3>
+            <p class="spaceli" style="color: #3F3F3F; font-weight: 700; font-size: 18px;">
+              ¿Cuando sabemos que nuestro esfuerzo está rindiendo frutos?
+            </p>
+
+            <p style="color: #3F3F3F; font-size: 16px;">
+              Cuando hay logros y es importante recordar que los logros inmediatos son la gasolina que mantiene alta la
+              moral
+              del equipo, pero es el destino lo que justifica el viaje.
+            </p>
+
+          </div>
+        </div>
+      </li>
+
+      <li class="">
+
+        <article class="card flexbox">
+          <div><span class="circle">S</span></div>
+          <div class="card-text">
+            <h2 class="title spaceli">Sobriedad</h2>
+            <h3 class="subtitle spaceli">¿Qué hace una persona con sobriedad?</h3>
+            <p>Se preocupa por el manejo de los recursos, y constantemente se cuestiona sobre cómo obtener lo mejor, con
+              menos.</p>
+          </div>
+        </article>
+      </li>
+
+    </ul>
+
+  </section>
+
+  <!-- Misión 1 | Bloque Banner -->
+  <div style="background: #d0021b; padding: 200px; font-weight: 700;">
+    <!-- Contenido banner -->
+    <h1 style="color: #ffffff; font-size: 90px; margin-bottom: 80px; max-width: 989px;">
+      ¿Qué son los equipos de alto rendimiento?
+    </h1>
+
+    <p class="spaceli" style="color: #ffffff; font-size: 16px; max-width: 392px;">
+      Es aquel que destaca por la autonomía,rapidez, eficiencia y productividad en su desempeño.
+    </p>
+    <p style="color: #ffffff; font-size: 16px; max-width: 392px;">
+      Un recordatorio para los líderes: para lograr resultados con los equipos de alto rendimiento se requiere tiempo,
+      constancia y voluntad
+    </p>
+
+  </div>
+
+  <ul>
+
+  </ul>
+
+
+  <section style="padding: 200px; background-color: white;">
+
+    <h2 class="encabezado" style="margin-bottom: 80px;">
+      Equipos
+    </h2>
+
+    <ul class="lista-principios">
+
+      <li class="grupouno">
+        <div class="hijos_flex contenedor_de_principios_flex">
+          <div class="circulo_rojo">1</div>
+          <div class="hijos_flex">
+            <h3 class="spaceli"> Golden Team </h3>
+            <ul class="color_negro">
+              <li>Humildad (P7): <a href="https://cutt.ly/5C0ZR5M"> https://cutt.ly/5C0ZR5M </a></li>
+              <li> Criterio (P9): <a href="https://cutt.ly/hC0ZVyY"> https://cutt.ly/hC0ZVyY </a></li>
+              <li> Excelencia (P7): <a href="https://cutt.ly/XC0Z8N8"> https://cutt.ly/XC0Z8N8 </a></li>
+            </ul>
+          </div>
+          <img src="https://i.imgur.com/u6hlEI4.png" class="hijos_flex">
+        </div>
+      </li>
+
+      <li style="display: flex; list-style-type: none; align-items:center; justify-content: center; padding: 0">
+
+        <figure style="margin-right: 40px;">
+          <img src="https://i.ibb.co/VTv3LL7/figure.png" style=" max-width: 449px;">
+        </figure>
+        <div style="display: flex;">
+          <span
+            style="font-size: 32px; color: #ffffff; background: #d0021b; border-radius: 50%; min-width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-right: 24px; margin-top: 10px;">
+            2
+          </span>
+          <div>
+
+            <h3 class="spaceli" style="text-transform: uppercase; color: #3f3f3f; font-weight: 700; font-size: 22px;">
+
+              Empatía Social Club
+            </h3>
+
+            <ul style="color: #3F3F3F; font-size: 16px; padding: 0; margin: 0 0 0 20px; max-width: 390px;">
+              <li style="margin-bottom: 8px;">
+                Empatía y compasión (P8): <a style="color: #46A9C9;" href="https://cutt.ly/iC0Xp2m">
+                  https://cutt.ly/iC0Xp2m
+                </a>
+              </li>
+
+              <li style="margin-bottom: 8px;">
+                Inspiración y Optimismo (P5): <a style="color: #46A9C9;" href="https://cutt.ly/pC0XxkE">
+                  https://cutt.ly/pC0XxkE </a>
+              </li>
+
+              <li>
+                Sirve a los demás (P6): <a style="color: #46A9C9;" href="https://cutt.ly/FC0XWfc">
+                  https://cutt.ly/FC0XWfc
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+      </li>
+
+      <!-- Estructura variación con imagen -->
+      <div class="wrapper">
+
+        <!-- Contenido variación con imagen -->
+        <article class="card flexbox">
+          <div><span class="circle">3</span></div>
+          <div class="card-text">
+            <h2 class="title">Alfa Omega</h2>
+            <ul class="list">
+              <li>Integridad (P1):<a class="link" href="https://cutt.ly/MC0XG4O" target="_blank">
+                  https://cutt.ly/MC0XG4O
+                </a></li>
+              <li>Comunicación (P4): <a class="link" href="https://cutt.ly/kC0XC0x" target="_blank">
+                  https://cutt.ly/kC0XC0x</a></li>
+              <li>Coraje (P10): <a class="link" href="https://cutt.ly/wC0X2Cb" target="_blank">
+                  https://cutt.ly/wC0X2Cb</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <img alt="hombre explicando gráficas financieras, una alcancía y una calculadora"
+              src="https://i.ibb.co/F6rxyQx/21118312-6428425-1.png">
+          </div>
+        </article>
+
+      </div>
+
+
+    </ul>
+
+  </section>
+
+  <div class="grupouno">
+    <!-- Misión 1 | Bloque Banner -->
+    <h1> Un líder del equipo AGUAYO...</h1>
+
+    <div>
+
+      <ol>
+        <li>Evita culpar a los demás y utiliza los errores para observar la situación y sacar conclusiones.
+        </li>
+        <li>Un líder en Aguayo, reconoce las deficiencias en el rendimiento del equipo.
+        </li>
+      </ol>
+
+      <a class="button"
+        href="https://www.notion.so/Principios-de-Liderazgo-en-Aguayo-338b57ea33f14b448ec44cccd7f24691#ec3b01e5f0f6485aac6f0a85a2b7194f">Ir
+        a principios de liderazgo → </a>
+
+    </div>
+
+  </div>
+
+
 
 </body>
+
 </html>
